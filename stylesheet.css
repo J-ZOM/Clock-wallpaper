@@ -1,25 +1,109 @@
-html, body, #clock {
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+
+html, body, #intro {
     height: 100%;
+    font-family: 'Lato',
+    sans-serif;
+
 }
 
+h1 {
+    font-size: 10em;
+}
 
-#clock {
+h3 {
+    font-size: 2em;
+}
+
+#intro {
     background-image: url(assetss/kellen-riggin-1547530-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
-    text-shadow: 
-    0px 4px 4px rgba(0, 0, 0, 0.8),
-    0px 6px 8px rgba(0, 0, 0, 0.4),
-    0px 8px 14px rgba(0, 0, 0, 0.1);
-
+/* disable user mouse selection */
     -webkit-user-select: none;
-
        -moz-user-select: none;
-
         -ms-user-select: none;
-
             user-select: none;
 }
 
+#clock {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8),
+    0px 6px 8px rgba(0, 0, 0, 0.4),
+    0px 8px 14px rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 1);
+   
+        -webkit-animation: expand-text 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: expand-text 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes expand-text {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes expand-text {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.fade-in {
+    -webkit-animation: fade-in 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: fade-in 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    } 
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    } 
+
+    100% {
+        opacity: 1;
+    }
+}
